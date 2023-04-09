@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Navbar from "./Navbar/Navbar";
 import { ThemeContext } from "../context/themeContext";
 import styles from "./Layout.module.scss";
-import { BRAND_A_THEME } from "../constants/constants";
+import { THEMES } from "../constants/constants";
 
 const Layout = (props) => {
   const { theme } = useContext(ThemeContext);
@@ -11,7 +11,7 @@ const Layout = (props) => {
       <header className={styles["header"]}>
         <Navbar />
       </header>
-      <main className={styles[theme === BRAND_A_THEME ? "branda" : "brandb"]}>
+      <main className={styles[theme === THEMES.BrandA ? "brand-a" : "brand-b"]}>
         {props.children}
       </main>
       <footer></footer>

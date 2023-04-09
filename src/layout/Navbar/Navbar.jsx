@@ -3,15 +3,11 @@ import Drawer from "./Drawer/Drawer";
 import styles from "./Navbar.module.scss";
 import Backdrop from "../../stories/Backdrop/Backdrop";
 import { ThemeContext } from "../../context/themeContext";
-import { BRAND_A_THEME, BRAND_B_THEME } from "../../constants/constants";
+import { THEMES } from "../../constants/constants";
 
 const Navbar = (props) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { theme, onThemeChange } = useContext(ThemeContext);
-
-  const themeChangeHandler = (theme) => {
-    onThemeChange(theme);
-  };
 
   const openDrawerHandler = () => {
     setIsDrawerOpen(true);
@@ -37,17 +33,17 @@ const Navbar = (props) => {
             <span className={styles["label"]}>App Theme</span>
             <span
               className={
-                styles[theme == BRAND_A_THEME ? "btn-active" : "btn-inactive"]
+                styles[theme === THEMES.BrandA ? "btn-active" : "btn-inactive"]
               }
-              onClick={themeChangeHandler.bind(this, BRAND_A_THEME)}
+              onClick={() => onThemeChange(THEMES.BrandA)}
             >
               Brand A
             </span>
             <span
               className={
-                styles[theme === BRAND_B_THEME ? "btn-active" : "btn-inactive"]
+                styles[theme === THEMES.BrandB ? "btn-active" : "btn-inactive"]
               }
-              onClick={themeChangeHandler.bind(this, BRAND_B_THEME)}
+              onClick={() => onThemeChange(THEMES.BrandB)}
             >
               Brand B
             </span>
