@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeContext } from "./context/themeContext";
+import BrandA from "./stories/BrandA/BrandA";
+import BrandB from "./stories/BrandB/BrandB";
+import { useContext } from "react";
+import styles from "./App.module.scss";
 
 function App() {
+  const { theme, onThemeChange } = useContext(ThemeContext);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className={styles[theme == "BrandA" ? "branda" : "brandb"]}>
+      <div>
+        <span
+          onClick={() => {
+            onThemeChange("BrandA");
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          Brand A
+        </span>
+        <span
+          onClick={() => {
+            onThemeChange("BrandB");
+          }}
+        >
+          Brand B
+        </span>
+      </div>
+      <div className={styles["contents"]}>
+        {theme == "BrandA" ? <BrandA /> : <BrandB />}
+      </div>
     </div>
   );
 }

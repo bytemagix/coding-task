@@ -1,0 +1,67 @@
+.card {
+  width: 95%;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px #ccc;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .header {
+    width: 100%;
+    flex-basis: 40%;
+
+    .title__underline {
+      margin: 0;
+      padding: 0;
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+
+    .title__nounderline {
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+
+  .text-box {
+    width: 100%;
+    flex-basis: 60%;
+
+    .actions {
+      .cta__primary {
+        background-color: #d2b99b;
+        color: white;
+        padding: 8px;
+        text-transform: uppercase;
+        border: 1px solid #d2b99b;
+        cursor: pointer;
+        margin-right: 8px;
+      }
+
+      .cta__secondary {
+        color: #d2b99b;
+        border: 1px solid #d2b99b;
+        background-color: white;
+        padding: 8px;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+
+    .header {
+    }
+
+    .text-box {
+    }
+  }
+}
