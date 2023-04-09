@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Times";
+  src: url("./asset/times.ttf");
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("./asset/arial.ttf");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
