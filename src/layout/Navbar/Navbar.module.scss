@@ -1,3 +1,4 @@
+@import "../../styles/_button.scss";
 .navbar {
   width: 100%;
   box-shadow: 2px 2px 2px 2px #eee;
@@ -14,6 +15,9 @@
   z-index: 1000;
 
   .brand {
+    h3 {
+      text-transform: uppercase;
+    }
   }
 
   .menu {
@@ -41,25 +45,6 @@
         text-transform: uppercase;
         font-weight: bold;
         margin-right: 10px;
-      }
-
-      .btn-active {
-        border: 1px solid green;
-        background-color: green;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        margin: 10px;
-        cursor: pointer;
-      }
-
-      .btn-inactive {
-        border: 1px solid green;
-        color: green;
-        padding: 5px 10px;
-        border-radius: 5px;
-        margin: 10px;
-        cursor: pointer;
       }
     }
   }

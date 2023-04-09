@@ -1,3 +1,4 @@
+@import "../../../styles/_button.scss";
 .drawer {
   width: 70%;
   position: fixed;
@@ -16,27 +17,6 @@
       font-weight: bold;
       margin-right: 10px;
       margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .btn-active {
-      border: 1px solid green;
-      background-color: green;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      margin: 5px;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .btn-inactive {
-      border: 1px solid green;
-      color: green;
-      padding: 5px 10px;
-      border-radius: 5px;
-      margin: 5px;
-      cursor: pointer;
       text-align: center;
     }
   }
