@@ -6,7 +6,7 @@ export default {
   component: BrandA,
   tag: ["autodocs"],
   argTypes: {
-    componentBackground: { control: "radio", options: ["#ffffff", "#FAF5EB"] },
+    componentBackground: { control: "radio", options: ["#FAF5EB", "#ffffff"] },
     textBoxBackground: { control: "radio", options: ["#ffffff", "#FAF5EB"] },
     textColor: { control: "radio", options: ["#282828", "#FFFFFF"] },
   },
@@ -20,5 +20,6 @@ export const Primary = {
     ctaPrimary: dummyData.ctaLinks[0].text,
     ctaSecondary: dummyData.ctaLinks[1].text,
     titleUnderline: true,
+    componentBackground: "#FAF5EB",
   },
 };

@@ -1,0 +1,43 @@
+.drawer {
+  width: 70%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+
+  .menu-items {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    .label {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .btn-active {
+      border: 1px solid green;
+      background-color: green;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin: 5px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-inactive {
+      border: 1px solid green;
+      color: green;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin: 5px;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+}

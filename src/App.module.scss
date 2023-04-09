@@ -1,20 +1,7 @@
-.branda {
+.container {
   width: 100%;
-  min-height: 100vh;
-  background-color: red;
-  .contents {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-.brandb {
-  width: 100%;
-  min-height: 100vh;
-  background-color: blue;
-
-  .contents {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
