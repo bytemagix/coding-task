@@ -1,14 +1,10 @@
-.card {
-  width: 95%;
-  background-color: white;
-  box-shadow: 2px 2px 2px 2px #ccc;
-  padding: 10px;
+.box {
+  width: 100%;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 
   .header {
-    width: 100%;
     flex-basis: 40%;
 
     .title__underline {
@@ -26,42 +22,20 @@
     }
   }
 
-  .text-box {
-    width: 100%;
+  .descriptions {
     flex-basis: 60%;
 
-    .actions {
-      .cta__primary {
-        background-color: #0057b7;
-        color: white;
-        padding: 8px;
-        text-transform: uppercase;
-        border: 1px solid #0057b7;
-        cursor: pointer;
-        margin-right: 8px;
-      }
-
-      .cta__secondary {
-        color: #0057b7;
-        border: 1px solid #0057b7;
-        background-color: white;
-        padding: 8px;
-        text-transform: uppercase;
-        cursor: pointer;
-        margin-right: 8px;
-      }
+    .description {
+      padding: 10px;
     }
+  }
+  .actions {
+    margin-top: 10px;
   }
 }
 
 @media (min-width: 768px) {
-  .card {
+  .box {
     flex-direction: row;
-
-    .header {
-    }
-
-    .text-box {
-    }
   }
 }

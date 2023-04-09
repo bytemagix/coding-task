@@ -23,3 +23,15 @@ export const Primary = {
     componentBackground: "#FAF5EB",
   },
 };
+
+export const Secondary = {
+  args: {
+    title: dummyData.title,
+    subTitle: dummyData.subTitle,
+    description: dummyData.description,
+    ctaPrimary: dummyData.ctaLinks[0].text,
+    ctaSecondary: dummyData.ctaLinks[1].text,
+    titleUnderline: true,
+    componentBackground: "#ffffff",
+  },
+};

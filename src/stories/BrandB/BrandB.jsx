@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import styles from "./BrandB.module.scss";
 import { dummyData } from "../../data/dummy";
+import Button from "../Button/Button";
+import Card from "../Card/Card";
 
 export const BrandB = ({
   title,
@@ -13,36 +15,45 @@ export const BrandB = ({
   textBoxBackground,
   textColor,
 }) => {
-  console.log(componentBackground);
   return (
-    <div
-      className={styles["card"]}
-      style={{
-        backgroundColor: `${componentBackground}`,
-        color: `${textColor}`,
-      }}
-    >
-      <div className={styles["header"]}>
-        <h1
-          className={
-            styles[titleUnderline ? "title__underline" : "title__nounderline"]
-          }
-        >
-          {title}
-        </h1>
-        <p>{subTitle}</p>
-      </div>
-      <div
-        className={styles["text-box"]}
-        style={{ backgroundColor: `${textBoxBackground}` }}
-      >
-        <p>{description}</p>
-        <div className={styles["actions"]}>
-          <button className={styles["cta__primary"]}>{ctaPrimary}</button>
-          <button className={styles["cta__secondary"]}>{ctaSecondary}</button>
+    <Card backgroundColor={componentBackground} textColor={textColor}>
+      <div className={styles["box"]}>
+        <div className={styles["header"]}>
+          <h1
+            className={
+              styles[titleUnderline ? "title__underline" : "title__nounderline"]
+            }
+          >
+            {title}
+          </h1>
+          <p>{subTitle}</p>
+        </div>
+        <div className={styles["descriptions"]}>
+          <div
+            className={styles["description"]}
+            style={{ backgroundColor: `${textBoxBackground}` }}
+          >
+            <p>{description}</p>
+          </div>
+          <div className={styles["actions"]}>
+            <Button
+              title={ctaPrimary}
+              variant="primary"
+              backgroundColor="#0057b7"
+              borderColor="#0057b7"
+              color="#FFFFFF"
+            />
+            <Button
+              title={ctaSecondary}
+              variant="secondary"
+              backgroundColor="#FFFFFF"
+              borderColor="#0057b7"
+              color="#0057b7"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
 
