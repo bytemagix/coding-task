@@ -12,17 +12,37 @@ const Drawer = (props) => {
         <span className={styles["label"]}>App Theme</span>
         <span
           className={
-            styles[theme === THEMES.BrandA ? "btn-active" : "btn-inactive"]
+            styles[
+              theme.title === THEMES.BrandA.title
+                ? "btn-active"
+                : "btn-inactive"
+            ]
           }
-          onClick={() => onThemeChange(THEMES.BrandA)}
+          onClick={() =>
+            onThemeChange(
+              THEMES.BrandA.title,
+              THEMES.BrandA.fontFamily,
+              THEMES.BrandA.backgroundColor
+            )
+          }
         >
           Brand A
         </span>
         <span
           className={
-            styles[theme === THEMES.BrandB ? "btn-active" : "btn-inactive"]
+            styles[
+              theme.title === THEMES.BrandB.title
+                ? "btn-active"
+                : "btn-inactive"
+            ]
           }
-          onClick={() => onThemeChange(THEMES.BrandB)}
+          onClick={() =>
+            onThemeChange(
+              THEMES.BrandA.title,
+              THEMES.BrandA.fontFamily,
+              THEMES.BrandA.backgroundColor
+            )
+          }
         >
           Brand B
         </span>

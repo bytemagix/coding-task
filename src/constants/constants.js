@@ -1,4 +1,12 @@
 export const THEMES = {
-  BrandA: "BrandA",
-  BrandB: "BrandB",
+  BrandA: {
+    title: "BrandA",
+    fontFamily: "Arial",
+    backgroundColor: "blue",
+  },
+  BrandB: {
+    title: "BrandB",
+    fontFamily: "Times",
+    backgroundColor: "red",
+  },
 };

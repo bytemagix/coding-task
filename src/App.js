@@ -7,18 +7,14 @@ import Layout from "./layout/Layout";
 import { THEMES } from "./constants/constants";
 
 function App() {
-  const { theme, onThemeChange } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <Layout>
       <div
         className={styles["container"]}
-        style={
-          theme === THEMES.BrandA
-            ? { fontFamily: "Arial" }
-            : { fontFamily: "Times" }
-        }
+        style={{ fontFamily: theme.fontFamily }}
       >
-        {theme == "BrandA" ? <BrandA /> : <BrandB />}
+        {theme.title === THEMES.BrandA.title ? <BrandA /> : <BrandB />}
       </div>
     </Layout>
   );

@@ -5,19 +5,20 @@
   .header {
   }
 
-  .brand-a {
+  .brand {
     width: 100%;
     min-height: 100vh;
-    background-color: blue;
     padding-top: 100px;
     margin: auto;
   }
 
+  .brand-a {
+    @extend .brand;
+    background-color: rgba(0, 0, 255, 0.3);
+  }
+
   .brand-b {
-    width: 100%;
-    min-height: 100vh;
-    background-color: red;
-    padding-top: 100px;
-    margin: auto;
+    @extend .brand;
+    background-color: rgba(255, 0, 0, 0.3);
   }
 }

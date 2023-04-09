@@ -11,7 +11,11 @@ const Layout = (props) => {
       <header className={styles["header"]}>
         <Navbar />
       </header>
-      <main className={styles[theme === THEMES.BrandA ? "brand-a" : "brand-b"]}>
+      <main
+        className={
+          styles[theme.title === THEMES.BrandA.title ? "brand-a" : "brand-b"]
+        }
+      >
         {props.children}
       </main>
       <footer></footer>
