@@ -1,4 +1,4 @@
-# Assumptions During Development
+# Assumptions & Decisions During Development
 
 #### 1. App is created via create-react-app in windows machine. You may need to adjust forward slash("/") & back slash("\\") in macOs if unable to start.
 
@@ -10,16 +10,20 @@
 
 #### 5. I have used various sass feature like partials, inheritance, variables, nested rules etc for stying & reusing css rules.
 
-#### 6. I have tried to minimize use of inline styles but in few cases to utilize flexibility of a component I have used dynamic inline styling.
+#### 6. Larger Components are broken down to smaller UI components to achieve code modularity.
 
-#### 7. Folder structure are can be standardized based on organizational standardization. I have use this structure as choice of personal preference on organizing my files.
+#### 7. I have tried to minimize use of inline styles but in few cases to utilize flexibility of a component I have used dynamic inline styling.
 
-#### 8. I have used storybook controls instead of knobs as knobs are depecrated in newer versions of storybook. controls are newer way of doing the same task. Found from github issue -- https://github.com/storybookjs/storybook/discussions/15060
+#### 8. Folder structure are can be standardized based on organizational standardization. I have use this structure as choice of personal preference on organizing my files.
 
-#### 9. I have developed some additional UI components like buttons, card, backdrop to reuse those UI in both the brands.
+#### 9. I have used storybook controls instead of knobs as knobs are deprecated in newer versions of storybook. controls are newer way of doing the same task. Found from github issue -- https://github.com/storybookjs/storybook/discussions/15060
 
-#### 10. Button are configurable via props. i.e Button can accept backgroundColor, borderColor, textColor, onClick etc. as props to make button more Generic & Resusable.
+#### 10. I have developed some additional UI components like buttons, card, backdrop to reuse those UI in both the brands.
 
-#### 11. Card component can accept backgroundColor, textColor as props.
+#### 11. Button are configurable via props. i.e Button can accept backgroundColor, borderColor, textColor, onClick etc. as props to make button more Generic & Reusable.
 
-#### 12. Both Brand A and Brand B Component reuses Card & Button component with its own configurations.
+#### 12. Card component can accept backgroundColor, textColor as props.
+
+#### 13. Both Brand A and Brand B Component reuses Card & Button component with its own configurations.
+
+#### ---- By Pranjal Das ----
