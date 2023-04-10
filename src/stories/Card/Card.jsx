@@ -1,14 +1,9 @@
 import PropTypes from "prop-types";
 import styles from "./Card.module.scss";
-import { dummyData } from "../../data/dummy";
 
-export const Card = ({
-  title,
-  variant,
-  backgroundColor,
-  textColor,
-  children,
-}) => {
+// Card is wrapper component. any content put under opening and closing
+// <Card> component will be rendered inside card UI
+export const Card = ({ backgroundColor, textColor, children }) => {
   return (
     <div
       className={styles["card"]}
@@ -20,15 +15,12 @@ export const Card = ({
 };
 
 Card.propTypes = {
-  title: PropTypes.string,
-  variant: PropTypes.string,
   backgroundColor: PropTypes.string,
   textColor: PropTypes.string,
 };
 
+//Pass any supported props
 Card.defaultProps = {
-  title: dummyData.title,
-  variant: "primary",
   backgroundColor: "#FFFFFF",
   textColor: "#000000",
 };

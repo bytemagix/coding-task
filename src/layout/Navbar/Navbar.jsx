@@ -1,13 +1,11 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import Drawer from "./Drawer/Drawer";
 import styles from "./Navbar.module.scss";
 import Backdrop from "../../stories/Backdrop/Backdrop";
-import { ThemeContext } from "../../context/themeContext";
-import { THEMES } from "../../constants/constants";
+import MenuItems from "../MenuItems/MenuItems";
 
 const Navbar = (props) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const { theme, onThemeChange } = useContext(ThemeContext);
 
   const openDrawerHandler = () => {
     setIsDrawerOpen(true);
@@ -21,56 +19,21 @@ const Navbar = (props) => {
     <>
       <nav className={styles["navbar"]}>
         <div className={styles["brand"]}>
-          <h3>Quote Block App</h3>
+          <h3 className={styles["header"]}>Quote Block App</h3>
         </div>
         <div className={styles["menu"]}>
           <div className={styles["menu-icon"]} onClick={openDrawerHandler}>
-            <span className={styles["menu-icon__line"]}></span>
-            <span className={styles["menu-icon__line"]}></span>
-            <span className={styles["menu-icon__line"]}></span>
+            <span className={styles["menu-icon__line1"]}></span>
+            <span className={styles["menu-icon__line2"]}></span>
+            <span className={styles["menu-icon__line3"]}></span>
           </div>
-          <div className={styles["menu-items"]}>
-            <span className={styles["label"]}>App Theme</span>
-            <span
-              className={
-                styles[
-                  theme.title === THEMES.BrandA.title
-                    ? "btn-active"
-                    : "btn-inactive"
-                ]
-              }
-              onClick={() =>
-                onThemeChange(
-                  THEMES.BrandA.title,
-                  THEMES.BrandA.fontFamily,
-                  THEMES.BrandA.backgroundColor
-                )
-              }
-            >
-              Brand A
-            </span>
-            <span
-              className={
-                styles[
-                  theme.title === THEMES.BrandB.title
-                    ? "btn-active"
-                    : "btn-inactive"
-                ]
-              }
-              onClick={() =>
-                onThemeChange(
-                  THEMES.BrandB.title,
-                  THEMES.BrandB.fontFamily,
-                  THEMES.BrandB.backgroundColor
-                )
-              }
-            >
-              Brand B
-            </span>
+          <div className={styles["actions"]}>
+            <MenuItems onClose={() => {}} />
           </div>
         </div>
       </nav>
-      {isDrawerOpen && <Drawer />}
+      {/* onClose is passed to automatically close drawer once theme is changed via button click */}
+      {isDrawerOpen && <Drawer onClose={closeDrawerHandler} />}
       {isDrawerOpen && <Backdrop onClick={closeDrawerHandler} />}
     </>
   );

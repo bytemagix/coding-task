@@ -1,3 +1,4 @@
+@import "../../styles/_title-underline.scss";
 .box {
   width: 100%;
   display: flex;
@@ -6,21 +7,6 @@
 
   .header {
     flex-basis: 40%;
-
-    .title__underline {
-      margin: 0;
-      padding: 0;
-      text-decoration: underline;
-      text-transform: uppercase;
-      text-underline-offset: 5px;
-    }
-
-    .title__nounderline {
-      margin: 0;
-      padding: 0;
-      text-transform: uppercase;
-      text-decoration: none;
-    }
   }
 
   .descriptions {

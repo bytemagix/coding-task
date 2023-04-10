@@ -3,7 +3,11 @@ import Backdrop from "./Backdrop";
 export default {
   title: "Component/Backdrop",
   component: Backdrop,
-  tag: ["autodocs"],
+  argTypes: {
+    backgroundColor: {
+      control: "color",
+    },
+  },
 };
 
 export const Primary = {

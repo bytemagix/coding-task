@@ -1,8 +1,10 @@
+@use "../styles/variables" as colors;
 .layout {
   width: 100%;
   min-height: 100vh;
 
   .header {
+    width: 100%;
   }
 
   .brand {
@@ -14,11 +16,11 @@
 
   .brand-a {
     @extend .brand;
-    background-color: rgba(0, 0, 255, 0.3);
+    background-color: colors.$color-light-blue;
   }
 
   .brand-b {
     @extend .brand;
-    background-color: rgba(255, 0, 0, 0.3);
+    background-color: colors.$color-light-red;
   }
 }

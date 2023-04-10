@@ -1,4 +1,3 @@
-@import "../../../styles/_button.scss";
 .drawer {
   width: 70%;
   position: fixed;
@@ -7,17 +6,7 @@
   bottom: 0;
   right: 0;
   background-color: white;
-
-  .menu-items {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    .label {
-      text-transform: uppercase;
-      font-weight: bold;
-      margin-right: 10px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
+  .actions {
+    width: 100%;
   }
 }

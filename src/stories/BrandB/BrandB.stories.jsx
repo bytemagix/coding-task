@@ -4,7 +4,8 @@ import { dummyData } from "../../data/dummy";
 export default {
   title: "Quote Block/Brand B",
   component: BrandB,
-  tag: ["autodocs"],
+  tags: ["autodocs"],
+  // Controls are defined to change componentBackgroud, textBackgroundColor & textColor
   argTypes: {
     componentBackground: { control: "radio", options: ["#F6F6F6 ", "#E6F1FA"] },
     textBoxBackground: {
@@ -15,6 +16,7 @@ export default {
   },
 };
 
+// configurations for primary styles
 export const Primary = {
   args: {
     title: dummyData.title,
@@ -27,6 +29,7 @@ export const Primary = {
   },
 };
 
+// configurations for secondary styles
 export const Secondary = {
   args: {
     title: dummyData.title,

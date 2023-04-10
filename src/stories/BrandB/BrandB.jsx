@@ -41,14 +41,14 @@ export const BrandB = ({
               variant="primary"
               backgroundColor="#0057b7"
               borderColor="#0057b7"
-              color="#FFFFFF"
+              textColor="#FFFFFF"
             />
             <Button
               title={ctaSecondary}
               variant="secondary"
               backgroundColor="#FFFFFF"
               borderColor="#0057b7"
-              color="#0057b7"
+              textColor="#0057b7"
             />
           </div>
         </div>

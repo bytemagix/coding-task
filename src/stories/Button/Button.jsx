@@ -7,16 +7,20 @@ export const Button = ({
   variant,
   backgroundColor,
   borderColor,
-  color,
+  textColor,
+  onClick,
 }) => {
   return (
     <button
       style={{
         backgroundColor: backgroundColor,
         borderColor: borderColor,
-        color: color,
+        color: textColor,
       }}
-      className={styles["button"]}
+      className={
+        styles[variant === "primary" ? "button-primary" : "button-secondary"]
+      }
+      onClick={onClick}
     >
       {title}
     </button>
@@ -26,8 +30,13 @@ export const Button = ({
 Button.propTypes = {
   title: PropTypes.string,
   variant: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  borderColor: PropTypes.string,
+  textColor: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
+// Put any of supported props as a default props
 Button.defaultProps = {
   title: dummyData.title,
   variant: "primary",

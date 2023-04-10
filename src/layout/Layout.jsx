@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Navbar from "./Navbar/Navbar";
-import { ThemeContext } from "../context/themeContext";
+import { ThemeContext } from "../store/theme-context";
 import styles from "./Layout.module.scss";
 import { THEMES } from "../constants/constants";
 

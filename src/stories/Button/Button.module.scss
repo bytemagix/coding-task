@@ -1,8 +1,24 @@
+$main-color: #6200ee;
 .button {
-  padding: 8px;
+  padding: 8px 20px;
   text-transform: uppercase;
-  border-width: 1px;
-  border-style: solid;
+  margin: 5px;
   cursor: pointer;
-  margin-right: 8px;
+  border-radius: 3px;
+  border: 1px solid $main-color;
+}
+.button-primary {
+  @extend .button;
+  background-color: $main-color;
+  color: white;
+
+  &:hover {
+    background-color: darken($color: $main-color, $amount: 5);
+  }
+}
+
+.button-secondary {
+  @extend .button;
+  background-color: transparent;
+  color: $main-color;
 }

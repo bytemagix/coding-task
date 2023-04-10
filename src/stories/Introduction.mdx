@@ -1,11 +1,25 @@
 # Assumptions During Development
 
-#### 1. App is created via create-react-app in windows machine. You may need to adjust forward slash(/) & back slash(\) in macOs if unable to start.
+#### 1. App is created via create-react-app in windows machine. You may need to adjust forward slash("/") & back slash("\\") in macOs if unable to start.
 
 #### 2. Theme config is stored in react context. Theme can be changed by clicking cta button in header section of the page.
 
-#### 3. I have use Css Module for locally scope css rules as css module helps in generating unique class names during compilation. it helps to avoid name clashes.
+#### 3. Global state (theme-context) of the app can be found under src/store folder.
 
-#### 4. I have used storybook controls instead of knobs as knobs are depecrated in newer versions of storybook. controls are newer way of doing the same task. Found from github issue -- https://github.com/storybookjs/storybook/discussions/15060
+#### 4. I have use Css Module for locally scope css rules as css module helps in generating unique class names during compilation. it helps to avoid name clashes.
 
-#### 5. I have developed some additional UI components like buttons, card, backdrop to reuse those UI in both the brands.
+#### 5. I have used various sass feature like partials, inheritance, variables, nested rules etc for stying & reusing css rules.
+
+#### 6. I have tried to minimize use of inline styles but in few cases to utilize flexibility of a component I have used dynamic inline styling.
+
+#### 7. Folder structure are can be standardized based on organizational standardization. I have use this structure as choice of personal preference on organizing my files.
+
+#### 8. I have used storybook controls instead of knobs as knobs are depecrated in newer versions of storybook. controls are newer way of doing the same task. Found from github issue -- https://github.com/storybookjs/storybook/discussions/15060
+
+#### 9. I have developed some additional UI components like buttons, card, backdrop to reuse those UI in both the brands.
+
+#### 10. Button are configurable via props. i.e Button can accept backgroundColor, borderColor, textColor, onClick etc. as props to make button more Generic & Resusable.
+
+#### 11. Card component can accept backgroundColor, textColor as props.
+
+#### 12. Both Brand A and Brand B Component reuses Card & Button component with its own configurations.

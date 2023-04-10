@@ -3,8 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ThemeContext, ThemeProvider } from "./context/themeContext";
-import "./asset/arial.ttf";
+import { ThemeProvider } from "./store/theme-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
